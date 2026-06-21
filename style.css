@@ -1,0 +1,277 @@
+/* =========================
+   GLOBAL THEME
+   ========================= */
+
+body {
+    margin: 0;
+    padding: clamp(12px, 2vw, 40px);
+
+    font-family: Arial, sans-serif;
+
+    background-image: url("images/bg-night.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #07a704;
+
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.9),
+        0 4px 10px rgba(0, 0, 0, 0.7);
+
+    overflow-x: hidden;
+}
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+h1 {
+    color: #ddcc17;
+
+    text-shadow: 0 3px 10px rgba(169, 58, 58, 0.9);
+
+    font-size: clamp(2.2rem, 4vw, 4.8rem);
+
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: red;
+
+    margin-top: 40px;
+    margin-left: clamp(0px, 4vw, 60px);
+
+    font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
+p {
+    margin-left: clamp(0px, 6vw, 120px);
+
+    font-size: clamp(0.95rem, 1.2vw, 1.3rem);
+
+    line-height: 1.6;
+}
+
+a {
+    color: #43e9ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: clamp(20px, 4vw, 60px);
+
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1 1 55%;
+}
+
+.hero-image {
+    flex: 1 1 260px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: clamp(200px, 25vw, 420px);
+    height: auto;
+
+    border-radius: 20px;
+}
+
+/* =========================
+   CARDS (FIXED BALANCED DESKTOP + MOBILE)
+   ========================= */
+
+.cards-section {
+    margin-top: 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+
+    gap: 20px;
+
+    max-width: 1400px;
+
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+}
+
+.cards-section a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.info-card {
+    background-color: rgba(20, 20, 20, 0.6);
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    border-radius: 20px;
+    border: 4px solid #000;
+
+    padding: clamp(16px, 2vw, 28px);
+
+    transition: transform 0.25s ease;
+
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.info-card:hover {
+    transform: scale(1.06);
+}
+
+.info-card img {
+    width: clamp(170px, 75%, 320px);
+    height: auto;
+
+    display: block;
+    margin: 0 auto 15px auto;
+
+    border-radius: 15px;
+}
+
+/* =========================
+   RETURN BUTTON
+   ========================= */
+
+.back-home-btn {
+    position: fixed;
+    top: 14%;
+    right: 3vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: yellow;
+    text-decoration: none;
+
+    z-index: 1000;
+}
+
+.back-home-btn img {
+    width: clamp(50px, 6vw, 110px);
+    height: auto;
+}
+
+/* =========================
+   SIDE IMAGE
+   ========================= */
+
+.page-side-image {
+    position: fixed;
+    top: 32%;
+    right: 20vw;
+
+    width: clamp(140px, 14vw, 320px);
+    height: auto;
+
+    z-index: 999;
+}
+
+/* =========================
+   NOVELS
+   ========================= */
+
+.novel-card {
+    max-width: min(900px, 90vw);
+
+    margin: 40px auto;
+
+    text-align: center;
+}
+
+.novel-card img {
+    width: clamp(120px, 25vw, 320px);
+    height: auto;
+
+    display: block;
+    margin: 20px auto;
+
+    border-radius: 15px;
+}
+
+/* =========================
+   VIDEOS
+   ========================= */
+
+video {
+    width: min(85vw, 800px);
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   CERT / EXPERIENCE
+   ========================= */
+
+.cert-card,
+.experience-card {
+    margin-bottom: 35px;
+}
+
+/* =========================
+   MOBILE FIXES
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    p {
+        margin-left: 0;
+    }
+
+    h2 {
+        margin-left: 0;
+    }
+
+    .cards-section {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20vw;
+    }
+
+    .info-card {
+        width: min(80vw, 280px);
+    }
+
+    .info-card:hover {
+        transform: scale(1.06);
+    }
+
+
+    .back-home-btn,
+    .page-side-image {
+        right: 10px;
+    }
+}
