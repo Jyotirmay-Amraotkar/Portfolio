@@ -54,6 +54,10 @@ p {
 }
 
 a {
+    margin-left: clamp(0px, 6vw, 120px);
+
+    font-size: clamp(0.95rem, 1.2vw, 1.3rem);
+
     color: #43e9ff;
     text-decoration: none;
 }
