@@ -1,19 +1,16 @@
-/* =========================
-   GLOBAL THEME
-   ========================= */
+/* ---------- GLOBAL THEME ---------- */
 
 body {
     margin: 0;
     padding: clamp(12px, 2vw, 40px);
-
-    font-family: Arial, sans-serif;
 
     background-image: url("images/bg-night.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 
-    color: #07a704;
+    color: white;
+    font-family: Arial, sans-serif;
 
     text-shadow:
         0 2px 4px rgba(0, 0, 0, 0.9),
@@ -22,34 +19,28 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================
-   HEADINGS
-   ========================= */
+
+
+
+/* ---------- HEADINGS ---------- */
 
 h1 {
     color: #ddcc17;
-
     text-shadow: 0 3px 10px rgba(169, 58, 58, 0.9);
-
     font-size: clamp(2.2rem, 4vw, 4.8rem);
-
     margin-bottom: 10px;
 }
 
 h2 {
     color: red;
-
     margin-top: 40px;
     margin-left: clamp(0px, 4vw, 60px);
-
     font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
 p {
     margin-left: clamp(0px, 6vw, 120px);
-
     font-size: clamp(0.95rem, 1.2vw, 1.3rem);
-
     line-height: 1.6;
 }
 
@@ -66,9 +57,11 @@ hr {
     margin: 30px 0;
 }
 
-/* =========================
-   HERO SECTION
-   ========================= */
+
+
+
+
+/* ---------- HERO SECTION ---------- */
 
 .hero {
     display: flex;
@@ -99,19 +92,19 @@ hr {
     border-radius: 20px;
 }
 
-/* =========================
-   CARDS (FIXED BALANCED DESKTOP + MOBILE)
-   ========================= */
+
+
+
+
+/* ---------- CARDS ---------- */
 
 .cards-section {
     margin-top: 80px;
 
     display: grid;
-
     grid-template-columns: repeat(2, minmax(240px, 1fr));
 
     gap: 20px;
-
     max-width: 1400px;
 
 }
@@ -123,7 +116,6 @@ hr {
 
 .info-card {
     background-color: rgba(20, 20, 20, 0.6);
-
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
 
@@ -131,9 +123,7 @@ hr {
     border: 4px solid #000;
 
     padding: clamp(16px, 2vw, 28px);
-
     transition: transform 0.25s ease;
-
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
@@ -149,25 +139,27 @@ hr {
 
     display: block;
     margin: 0 auto 15px auto;
-
     border-radius: 15px;
 }
 
-/* =========================
-   RETURN BUTTON
-   ========================= */
+
+
+
+
+/* ---------- RETURN BUTTON ---------- */
 
 .back-home-btn {
     position: fixed;
-    top: 14%;
-    right: 3vw;
+    top: 5%;
+    right: 1vw;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     color: yellow;
-    text-decoration: none;
+    font-size: clamp(14px, 2vw, 16px);
+    text-align: center;
 
     z-index: 1000;
 }
@@ -177,30 +169,32 @@ hr {
     height: auto;
 }
 
-/* =========================
-   SIDE IMAGE
-   ========================= */
+
+
+
+
+/* ---------- SIDE IMAGE ---------- */
 
 .page-side-image {
     position: fixed;
     top: 32%;
     right: 20vw;
 
-    width: clamp(120px, 12vw, 280px);
+    width: clamp(120px, 14vw, 350px);
     height: auto;
 
     z-index: 999;
 }
 
-/* =========================
-   NOVELS
-   ========================= */
+
+
+
+
+/* ---------- NOVELS ---------- */
 
 .novel-card {
     max-width: min(900px, 90vw);
-
     margin: 40px auto;
-
     text-align: center;
 }
 
@@ -214,9 +208,11 @@ hr {
     border-radius: 15px;
 }
 
-/* =========================
-   VIDEOS
-   ========================= */
+
+
+
+
+/* ---------- VIDEOS ---------- */
 
 video {
     width: min(85vw, 800px);
@@ -224,18 +220,14 @@ video {
     display: block;
 }
 
-/* =========================
-   CERT / EXPERIENCE
-   ========================= */
+/* ---------- CERT / EXPERIENCE ---------- */
 
 .cert-card,
 .experience-card {
     margin-bottom: 35px;
 }
 
-/* =========================
-   MOBILE FIXES
-   ========================= */
+/* ---------- MOBILE FIXES ---------- */
 
 @media (max-width: 768px) {
 
@@ -265,7 +257,6 @@ video {
     .info-card:hover {
         transform: scale(1.06);
     }
-
 
     .back-home-btn,
     .page-side-image {
