@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-    color: red;
+    color: wheat;
     margin-top: 40px;
     margin-left: clamp(0px, 4vw, 60px);
     font-size: clamp(1.2rem, 2vw, 2rem);
@@ -165,8 +165,9 @@ hr {
 }
 
 .back-home-btn img {
-    width: clamp(50px, 6vw, 110px);
+    width: clamp(30px, 6vw, 90px);
     height: auto;
+    margin-bottom: 2vw;
 }
 
 
